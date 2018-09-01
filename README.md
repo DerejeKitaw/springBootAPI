@@ -74,3 +74,33 @@ Documentation](https://docs.spring.io/spring/docs/5.0.8.RELEASE/spring-framework
 ```
 mvn spring-boot:run
 ```
+
+## Creating an Executable Jar
+> To create an executable jar, we need to add the `spring-boot-maven-plugin` to our pom.xml. To
+do so, insert the following lines just below the dependencies section:
+```xml
+<build>
+<plugins>
+ <plugin>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-maven-plugin</artifactId>
+ </plugin>
+</plugins>
+</build>
+```
+run
+```
+mvn package
+```
+> If you look in the target directory, you should see myproject-0.0.1-SNAPSHOT.jar. The file
+should be around 10 MB in size. If you want to peek inside, you can use `jar tvf`, as follows:
+```
+jar tvf target/myproject-0.0.1-SNAPSHOT.jar
+```
+> You should also see a much smaller file named myproject-0.0.1-SNAPSHOT.jar.original in
+the target directory. This is the original jar file that Maven created before it was repackaged by Spring
+Boot.
+> To run that application, use the 
+```
+java -jar target/myproject-0.0.1-SNAPSHOT.jar
+```
