@@ -6,7 +6,10 @@ target/
 .project
 .settings
 .springBeans
-
+.metadata/*.*
+.metadata/
+.plugins
+.log
 ### IntelliJ IDEA ###
 .idea
 *.iws
