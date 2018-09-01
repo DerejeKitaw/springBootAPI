@@ -104,3 +104,5 @@ Boot.
 ```
 java -jar target/myproject-0.0.1-SNAPSHOT.jar
 ```
+
+# [Spring boot sample projects](https://github.com/spring-projects/spring-boot/tree/v2.0.4.RELEASE/spring-boot-samples)
